@@ -1,0 +1,774 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --a: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.left {
+  width: 25vw;
+  padding: 5px;
+}
+
+.right {
+  width: 72vw;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.home {
+  padding: 10px;
+}
+
+.home ul li {
+  display: flex;
+  gap: 15px;
+  width: 14px;
+  list-style: none;
+  padding-top: 14px;
+  font-weight: bold;
+}
+
+.close {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.heading {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  padding-top: 14px;
+  padding: 23px 14px;
+  font-weight: 700px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.heading img {
+  width: 20px;
+}
+
+.library {
+  min-height: 80vh;
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  font-size: 11px;
+  font-weight: 400;
+  color: grey;
+  gap: 13px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.footer a {
+  color: grey;
+}
+
+.right {
+  margin: 16px 0;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(34 34 34);
+}
+
+.header>* {
+  padding: 20px;
+}
+
+.Melofy-playlist {
+  padding: 12px;
+}
+
+.Melofy-playlist h1 {
+  padding: 12px;
+}
+
+.cardContainer {
+  margin: 14px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.card {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  position: relative;
+  transition: all 0.9s;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card:hover {
+  background-color: rgb(105, 103, 103);
+  cursor: pointer;
+  --a: 1;
+}
+
+.card>* {
+  padding-top: 10px;
+}
+
+.play {
+  width: 25px;
+  height: 28px;
+  background-color: #1fdf64;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 105px;
+  right: 17px;
+  opacity: var(--a);
+  transition: all 1s ease-out;
+}
+
+.playbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  filter: invert(1);
+  background: #e2d9d9;
+  border-radius: 10px;
+  padding: 12px;
+  width: 69.5vw;
+  min-height: 40px;
+  margin-left: 5px;
+}
+
+.songbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.songlist {
+  padding: 0 12px;
+  height: calc(100vh - 200px);
+  overflow: auto;
+  margin-bottom: 44px;
+}
+
+.songList .info {
+  font-size: 13px;
+  width: 344px;
+}
+
+.songlist ul li {
+  list-style-type: decimal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px 0;
+  border: 1px solid rgba(146, 143, 143, 0.491);
+  margin: 12px 0;
+  padding: 13px;
+  border-radius: 5px;
+}
+
+/* Add these styles to your existing style.css file */
+
+/* Fix for auth buttons alignment */
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Enhanced button styles - replace existing auth-btn styles */
+.auth-btn {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Update existing Signupbtn styles */
+.Signupbtn {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+  font-weight: bold !important;
+  outline: none !important;
+  font-size: 16px !important;
+}
+
+.Signupbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  color: white !important;
+  font-size: 17px;
+}
+
+.Loginbtn {
+  background: linear-gradient(45deg, #1fdf64, #00d2ff) !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+  border-radius: 25px !important;
+  padding: 12px 24px !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.Loginbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(31, 223, 100, 0.4);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.user-info {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: rgba(10, 10, 10, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 14px 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.user-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: red;
+  transform: translateY(-1px);
+}
+
+/* Modal styles - keep existing and add these enhancements */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: slideIn 0.4s ease;
+}
+
+.modal-header {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  padding: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #1fdf64, #00d2ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(31, 223, 100, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  background: linear-gradient(45deg, #00b894, #00cec9);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 600;
+  display: none;
+}
+
+.error-message {
+  background: linear-gradient(45deg, #e17055, #d63031);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 600;
+  display: none;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 15px;
+  }
+
+  .auth-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+.playnow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playnow span {
+  font-size: 15px;
+  width: 64px;
+  padding: 12px;
+}
+
+.seekbar {
+  transition: background 0.3s ease;
+  height: 4px;
+  width: 98%;
+  background: black;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0.5px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  background-color: black;
+  position: relative;
+  bottom: 5px;
+  left: 0%;
+  transition: left 0.5s;
+}
+
+.abovebar {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  width: 100%;
+  align-items: center;
+}
+
+.songinfo {
+  color: black;
+  padding: 0 12px;
+  width: 250px;
+}
+
+.songtime {
+  width: 150px;
+  color: black;
+  padding: 0 12px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburgerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.timevol {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.volrange input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.volrange input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.volrange input[type="range"]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 250px;
+  background: rgba(10, 10, 10, 0.1);
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: 1px solid #918b8b;
+  width: 300px;
+  gap: 12px;
+  height: 40px;
+  margin-top: 14px;
+}
+
+.search input[type="text"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  flex: 2;
+}
+
+.search img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.homeicon {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  background: rgba(10, 10, 10, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: -30px;
+}
+
+.homeicon:hover {
+  background-color: #333;
+}
+
+.homeiocn img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1200px) {
+  .left {
+    position: absolute;
+    left: -130%;
+    transition: all 0.3s;
+    z-index: 1;
+    width: 373px;
+    background-color: black;
+    padding: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+  }
+
+  .songinfo,
+  .songtime {
+    width: auto;
+  }
+
+  .left .close {
+    position: absolute;
+    right: 31px;
+    top: 25px;
+    width: 29px;
+  }
+
+  .timevol {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+  .playbar {
+    width: calc(100vw - 75px);
+  }
+
+  .seekbar {
+    width: calc(100vw - 120px);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .right {
+    margin: 0;
+  }
+
+  .card {
+    width: 55vw;
+  }
+
+  .cardContainer {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .close {
+    display: block;
+  }
+
+  .abovebar {
+    flex-direction: column;
+    gap: 23px;
+    align-items: center;
+  }
+
+  .cardContainer {
+    max-height: unset;
+    overflow-y: unset;
+    margin-bottom: 35vh;
+  }
+
+  .playbar {
+    right: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+
+  .header>* {
+    padding: 2px;
+  }
+
+  .buttons>* {
+    margin: 0 6px;
+  }
+
+  .header {
+    padding: 7px;
+  }
+
+  .Melofy-playlist h1 {
+    padding: 4px;
+  }
+
+  .library {
+    height: 85vh;
+  }
+
+  .left {
+    width: 100vw;
+  }
+}
