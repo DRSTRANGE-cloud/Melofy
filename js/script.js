@@ -215,7 +215,7 @@ document.getElementById("searchInput").addEventListener("input", function () {
 });
 
 //Autoplay next song
-currentSong.removeEventListener("ended", () => { });
+currentSong.removeEventListener("ended", () => {});
 currentSong.addEventListener("ended", () => {
   const current = getCurrentFilename();
   const index = songs.findIndex((s) => s.endsWith(current));
@@ -246,19 +246,19 @@ window.onload = async function () {
 // Initialize the login system
 function initLoginSystem() {
   // Check if user is already logged in
-  const loggedInUser = getStoredData('currentUser');
+  const loggedInUser = getStoredData("currentUser");
   if (loggedInUser) {
     currentUser = loggedInUser;
     showUserInfo();
   }
 
   // Load users from memory (simulating localStorage functionality)
-  const storedUsers = getStoredData('users');
+  const storedUsers = getStoredData("users");
   if (storedUsers) {
     users = storedUsers;
   } else {
     // Add default user
-    users['Deepak'] = '123456';
+    users["Deepak"] = "123456";
   }
 }
 
@@ -293,32 +293,34 @@ function showSignup() {
 
 function closeLogin() {
   document.getElementById("loginModal").style.display = "none";
-  clearForm('login');
+  clearForm("login");
 }
 
 function closeSignup() {
   document.getElementById("signupModal").style.display = "none";
-  clearForm('signup');
+  clearForm("signup");
 }
 
 // Clear form inputs
 function clearForm(type) {
-  if (type === 'login') {
-    document.getElementById("loginUsername").value = '';
-    document.getElementById("loginPassword").value = '';
+  if (type === "login") {
+    document.getElementById("loginUsername").value = "";
+    document.getElementById("loginPassword").value = "";
   } else {
-    document.getElementById("signupUsername").value = '';
-    document.getElementById("signupPassword").value = '';
+    document.getElementById("signupUsername").value = "";
+    document.getElementById("signupPassword").value = "";
   }
   clearMessages();
 }
 
 // Clear success/error messages
 function clearMessages() {
-  const messages = document.querySelectorAll('.success-message, .error-message');
-  messages.forEach(msg => {
-    msg.style.display = 'none';
-    msg.textContent = '';
+  const messages = document.querySelectorAll(
+    ".success-message, .error-message"
+  );
+  messages.forEach((msg) => {
+    msg.style.display = "none";
+    msg.textContent = "";
   });
 }
 
@@ -326,11 +328,11 @@ function clearMessages() {
 function showMessage(elementId, message, isSuccess = true) {
   const element = document.getElementById(elementId);
   element.textContent = message;
-  element.style.display = 'block';
+  element.style.display = "block";
 
   // Auto hide after 3 seconds
   setTimeout(() => {
-    element.style.display = 'none';
+    element.style.display = "none";
   }, 3000);
 }
 
@@ -342,30 +344,49 @@ function signupUser(event) {
   const password = document.getElementById("signupPassword").value.trim();
 
   if (!username || !password) {
-    showMessage('signupError', 'Please enter both username and password.', false);
+    showMessage(
+      "signupError",
+      "Please enter both username and password.",
+      false
+    );
     return;
   }
 
   if (username.length < 3) {
-    showMessage('signupError', 'Username must be at least 3 characters long.', false);
+    showMessage(
+      "signupError",
+      "Username must be at least 3 characters long.",
+      false
+    );
     return;
   }
 
   if (password.length < 6) {
-    showMessage('signupError', 'Password must be at least 6 characters long.', false);
+    showMessage(
+      "signupError",
+      "Password must be at least 6 characters long.",
+      false
+    );
     return;
   }
 
   if (users[username]) {
-    showMessage('signupError', 'Username already exists. Please choose another.', false);
+    showMessage(
+      "signupError",
+      "Username already exists. Please choose another.",
+      false
+    );
     return;
   }
 
   // Store new user
   users[username] = password;
-  storeData('users', users);
+  storeData("users", users);
 
-  showMessage('signupSuccess', 'Account created successfully! You can now login.');
+  showMessage(
+    "signupSuccess",
+    "Account created successfully! You can now login."
+  );
 
   // Clear form after successful signup
   setTimeout(() => {
@@ -382,16 +403,20 @@ function loginUser(event) {
   const password = document.getElementById("loginPassword").value.trim();
 
   if (!username || !password) {
-    showMessage('loginError', 'Please enter both username and password.', false);
+    showMessage(
+      "loginError",
+      "Please enter both username and password.",
+      false
+    );
     return;
   }
 
   // Check credentials
   if (users[username] && users[username] === password) {
     currentUser = username;
-    storeData('currentUser', currentUser);
+    storeData("currentUser", currentUser);
 
-    showMessage('loginSuccess', `Welcome back, ${username}!`);
+    showMessage("loginSuccess", `Welcome back, ${username}!`);
 
     setTimeout(() => {
       closeLogin();
@@ -399,7 +424,7 @@ function loginUser(event) {
       showPlaylists();
     }, 1500);
   } else {
-    showMessage('loginError', 'Invalid username or password.', false);
+    showMessage("loginError", "Invalid username or password.", false);
   }
 }
 
@@ -424,7 +449,7 @@ function showUserInfo() {
 // Enhanced logout function
 function logout() {
   currentUser = null;
-  storeData('currentUser', null);
+  storeData("currentUser", null);
 
   // Show auth buttons
   document.getElementById("authButtons").style.display = "flex";
@@ -448,7 +473,7 @@ function showPlaylists() {
 }
 
 // Close modal when clicking outside
-window.addEventListener('click', function (event) {
+window.addEventListener("click", function (event) {
   const loginModal = document.getElementById("loginModal");
   const signupModal = document.getElementById("signupModal");
 
@@ -479,7 +504,7 @@ function signup() {
   const password = document.getElementById("signupPassword").value;
   if (username && password) {
     users[username] = password;
-    storeData('users', users);
+    storeData("users", users);
     alert("Signup successful! Please login.");
     closeSignup();
   } else {
@@ -494,7 +519,7 @@ function login() {
   // Hardcoded default
   if (username === "Deepak" && password === "123456") {
     currentUser = username;
-    storeData('currentUser', currentUser);
+    storeData("currentUser", currentUser);
     alert("Login successful!");
     closeLogin();
     showUserInfo();
@@ -505,7 +530,7 @@ function login() {
   // Check stored users
   if (users[username] && users[username] === password) {
     currentUser = username;
-    storeData('currentUser', currentUser);
+    storeData("currentUser", currentUser);
     alert("Login successful!");
     closeLogin();
     showUserInfo();
