@@ -1,4 +1,7 @@
 {
-  "title": "Backseat Driver",
-  "description": "Cruise through timeless classical melodies."
+    "title": "Driver",
+    "description": "Music for the road",
+    "songs": [
+        "Backseat Driver - Honnie.mp3"
+    ]
 }

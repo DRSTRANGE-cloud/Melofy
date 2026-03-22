@@ -1,4 +1,9 @@
 {
     "title": "Classical Songs",
-    "description": "Have Some Classical Music"
+    "description": "Timeless Indian classics",
+    "songs": [
+        "Bahon Mein Chale Aao - Lata Mangeshkar.mp3",
+        "O Mere Dil Ke Chain - Kishore Kumar.mp3",
+        "Unse Mili Nazar Ke Mere Hosh Ud Gaye.mp3"
+    ]
 }

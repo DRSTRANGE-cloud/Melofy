@@ -1,4 +1,10 @@
 {
-  "title": "Just Chill",
-  "description": "Easy vibes for your chill moments."
+    "title": "Chill Vibes",
+    "description": "Relax and unwind",
+    "songs": [
+        "Cash - Mark Karan, Scott Guberman.mp3",
+        "For Our Friends - Telecasted.mp3",
+        "Hanging Motionless - Mark Karan.mp3",
+        "Repeat - Mark Karan, Scott Guberman.mp3"
+    ]
 }

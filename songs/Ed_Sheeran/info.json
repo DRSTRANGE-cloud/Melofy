@@ -1,4 +1,7 @@
 {
-    "title": "Sapphire",
-    "description": "Ed Sheeran for you"
+    "title": "Ed Sheeran",
+    "description": "Shape of his music",
+    "songs": [
+        "Sapphire - Ed Sheeran.mp3"
+    ]
 }
