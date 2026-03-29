@@ -743,6 +743,20 @@ async function init() {
     };
   });
 
+  // ── Hamburger menu ──
+  const hamburger = document.querySelector('.hamburger');
+  const closeBtn = document.querySelector('.close img');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      document.querySelector('.left').classList.add('open');
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      document.querySelector('.left').classList.remove('open');
+    });
+  }
+
   // ── Load albums & favorites ──
   await displayAlbums();
   renderFavorites();
