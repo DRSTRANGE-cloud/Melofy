@@ -75,30 +75,6 @@ Melofy is a sleek, responsive, and interactive web-based music player built usin
 
 ---
 
-# 📁 Project Structure
-Melofy/
-│
-├── index.html # Main UI
-├── css/
-│ ├── style.css # Main styles
-│ └── utility.css # Utility classes
-│
-├── js/
-│ └── script.js # Core logic (player + UI)
-│
-├── Images/ # Icons & UI assets
-│
-├── songs/
-│ ├── Album1/
-│ │ ├── info.json
-│ │ ├── song1.mp3
-│ │ └── cover.jpg
-│ └── ...
-│
-└── README.md
-
----
-
 # 🛠 How It Works
 
 1. Albums are fetched dynamically from the `/songs` directory  
