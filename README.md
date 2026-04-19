@@ -1,50 +1,124 @@
-# 🎵 Melofy - Web Music Player
+# 🎵 Melofy — Modern Web Music Player
 
-Melofy is a web-based music player application that allows users to browse music albums, play songs, and enjoy an interactive music listening experience. The player supports features such as play, pause, next/previous track navigation, volume control, and autoplay of the next song.
+🔗 **Live Demo:** https://melofy1.netlify.app/
 
-## 🚀 Features
+Melofy is a sleek, responsive, and interactive web-based music player built using **vanilla HTML, CSS, and JavaScript**. It delivers a Spotify-inspired UI with dynamic album loading, smooth playback controls, and a polished user experience.
 
-- Browse music albums and playlists dynamically loaded from the `songs/` directory.
-- Play, pause, and navigate between songs.
-- Autoplay the next song when the current song ends.
-- Volume control with mute/unmute functionality.
-- Search and filter albums by title or description.
-- User login and signup system (in-memory simulation).
-- Responsive UI with album cover art and song information display.
-- Seekbar to navigate within the current song.
+---
 
-## 📁 Project Structure
+# 🚀 Features
 
-- `index.html` - Main HTML page for the music player UI.
-- `css/` - Contains stylesheets for the application.
-- `js/script.js` - Main JavaScript file handling music playback, UI interactions, and user authentication.
-- `Images/` - Contains icons and images used in the UI.
-- `songs/` - Directory containing music albums, each with MP3 files, cover images, and metadata (`info.json`).
+## 🎧 Core Music Functionality
+- ▶️ Play / Pause / Next / Previous controls  
+- 🔁 Autoplay next track (loop support for playlists)  
+- 🎚️ Seekbar with real-time progress tracking  
+- 🔊 Volume control with mute/unmute toggle  
+- 🎵 Dynamic song loading from local directory  
 
-## 🛠 How to Use
+---
 
-1. Open `index.html` in a modern web browser.
-2. Browse available albums and click on an album to view its songs.
-3. Click on a song to play it, or use the play/pause and next/previous controls.
-4. Adjust volume using the slider or mute/unmute button.
-5. The player will automatically play the next song when the current one finishes.
-6. Use the search bar to filter albums by title or description.
-7. Use the login/signup modals to simulate user authentication.
+## 📀 Album & Playlist System
+- Albums dynamically loaded from `/songs` directory  
+- Each album contains:
+  - `info.json` (metadata)
+  - `.mp3` files
+  - cover image  
+- Sidebar song list updates per selected album  
+- Displays:
+  - Song name  
+  - Artist  
+  - Duration  
 
-## 🔁 Autoplay Next Song
+---
 
-The player automatically plays the next song in the current playlist when the current song ends. If the last song finishes, playback loops back to the first song.
+## ❤️ Favorites (Liked Songs)
+- Add/remove songs to favorites  
+- Dedicated **Liked Songs section**  
+- Persistent UI state (session-based)  
+- Smooth hover + glow effects  
 
-## Dependencies
+---
 
-- No external dependencies. The project uses vanilla JavaScript, HTML, and CSS.
+## 🔐 Authentication (Frontend Simulation)
+- Login / Signup UI system  
+- In-memory user handling  
+- Seamless UI transitions between states  
 
-## Notes
+---
 
-- The user login system is simulated in-memory and does not persist data beyond the session.
-- Songs and albums are dynamically loaded from the `songs/` directory structure.
-- Ensure your browser supports the HTML5 Audio API for full functionality.
+## 🔍 Search & Filtering
+- Search albums by:
+  - Title  
+  - Description  
+- Real-time filtering  
 
-## 📄 License
+---
 
-This project is licensed under the MIT License – free to use, modify, and distribute.
+## 🎨 UI/UX Enhancements (Recent Improvements)
+- Glassmorphism-based UI  
+- Spotify-inspired layout  
+- Fully aligned grid system (no overflow issues)  
+- Equal-sized album cards  
+- Animated play button with glow effects  
+- Improved volume slider alignment  
+- Responsive layout (desktop-first)  
+- Golden + green hover interactions  
+- Clean typography and spacing  
+
+---
+
+## ⚡ Performance Improvements
+- Faster album rendering  
+- Optimized DOM updates  
+- Reduced layout shifts  
+- Efficient event handling  
+
+---
+
+# 📁 Project Structure
+Melofy/
+│
+├── index.html # Main UI
+├── css/
+│ ├── style.css # Main styles
+│ └── utility.css # Utility classes
+│
+├── js/
+│ └── script.js # Core logic (player + UI)
+│
+├── Images/ # Icons & UI assets
+│
+├── songs/
+│ ├── Album1/
+│ │ ├── info.json
+│ │ ├── song1.mp3
+│ │ └── cover.jpg
+│ └── ...
+│
+└── README.md
+
+---
+
+# 🛠 How It Works
+
+1. Albums are fetched dynamically from the `/songs` directory  
+2. Each album contains metadata (`info.json`)  
+3. Clicking an album:
+   - Loads songs into sidebar  
+   - Updates UI  
+4. Clicking a song:
+   - Plays audio using HTML5 Audio API  
+5. Player controls manage playback state globally  
+
+---
+
+# 📄 License
+
+MIT License — free to use, modify, and distribute.
+
+---
+
+# 🙌 Author
+
+Deepak Yadav
+GitHub: @DRSTRANGE-cloud
